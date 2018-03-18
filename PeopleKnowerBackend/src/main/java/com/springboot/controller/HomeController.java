@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class HomeController {
+public class HomeController 
+{
 	@RequestMapping("/")
-	public String welcome() {
+	public String welcome() 
+	{
 		return "Welcome to Spring boot";
 	}
 }
