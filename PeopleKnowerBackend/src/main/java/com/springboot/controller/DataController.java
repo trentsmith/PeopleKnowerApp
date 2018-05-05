@@ -30,4 +30,6 @@ public class DataController {
 	{
 		return service.findAllData();
 	}
+	
+	
 }

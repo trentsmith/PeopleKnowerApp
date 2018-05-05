@@ -17,18 +17,16 @@ import com.springboot.service.RelationsService;
 @RequestMapping("/api/Relations")
 public class RelationController 
 {
-/*	@Autowired
+	@Autowired
 	RelationsService service;
-	@CrossOrigin
 	@RequestMapping(method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public void addFC(@RequestBody Relations p)
 	{
 		service.addPeopleKnowerUser(p);
 	}
-	@CrossOrigin
 	@RequestMapping(path = "/all",method = RequestMethod.GET,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public List<Relations> findAll() 
 	{
 		return service.findAllPeopleKnower();
-	}*/
+	}
 }

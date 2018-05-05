@@ -7,7 +7,6 @@ import com.springboot.model.PeopleKnower;
 import com.springboot.model.Relations;
 
 @Repository
-public interface RelationsRepository  extends JpaRepository<Relations, String> 
+public interface RelationsRepository  extends JpaRepository<Relations, Integer> 
 {
-
 }

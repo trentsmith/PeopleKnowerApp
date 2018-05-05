@@ -3,10 +3,14 @@ package com.springboot.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.springboot.model.Relations;
 import com.springboot.repository.RelationsRepository;
 
+@Service
+@Transactional
 public class RelationsServiceImpl implements RelationsService
 {
 	@Autowired
