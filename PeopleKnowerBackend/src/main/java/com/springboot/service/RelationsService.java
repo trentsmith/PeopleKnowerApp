@@ -8,4 +8,5 @@ public interface RelationsService
 {
 	public List<Relations> findAllPeopleKnower();
 	public void addPeopleKnowerUser(Relations p);
+	public Relations findRelationById(int id);
 }

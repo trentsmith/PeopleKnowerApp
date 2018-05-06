@@ -29,5 +29,14 @@ public class RelationsServiceImpl implements RelationsService
 		return pRepo.findAll();
 
 	}
+
+	@Override
+	public Relations findRelationById(int id) {
+		// TODO Auto-generated method stub
+		return pRepo.findRelationById(id);
+	}
+	
+
+	
 	
 }

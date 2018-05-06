@@ -19,6 +19,7 @@ public class PeopleKnowerServiceImpl implements PeopleKnowerService
 	@Autowired
 	private PeopleKnowerRepository pRepo;
 
+	@Override
 	public void addPeopleKnowerUser(PeopleKnower p) 
 	{
 		// TODO Auto-generated method stub
@@ -26,9 +27,16 @@ public class PeopleKnowerServiceImpl implements PeopleKnowerService
 
 	}
 
+	@Override
 	public List<PeopleKnower> findAllPeopleKnower() {
 		// TODO Auto-generated method stub
 		return pRepo.findAll();
+	}
+
+	@Override
+	public PeopleKnower findPeopleByUsername(String User) {
+		// TODO Auto-generated method stub
+		return pRepo.findPeopleByUsername(User);
 	}
 	
 }

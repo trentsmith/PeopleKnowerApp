@@ -8,7 +8,7 @@ import com.springboot.model.PeopleKnower;
 
 @Repository
 
-public interface PeopleKnowerRepository extends JpaRepository<PeopleKnower, String> {
+public interface PeopleKnowerRepository extends JpaRepository<PeopleKnower, String> 
+{
 	public PeopleKnower findPeopleByUsername(String User);
-
 }

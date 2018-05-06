@@ -9,4 +9,5 @@ import com.springboot.model.Relations;
 @Repository
 public interface RelationsRepository  extends JpaRepository<Relations, Integer> 
 {
+	public Relations findRelationById(int id);
 }

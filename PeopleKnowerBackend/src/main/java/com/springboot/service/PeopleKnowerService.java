@@ -7,4 +7,6 @@ import com.springboot.model.PeopleKnower;
 public interface PeopleKnowerService {
 	public void addPeopleKnowerUser(PeopleKnower p);
 	public List<PeopleKnower> findAllPeopleKnower();
+	public PeopleKnower findPeopleByUsername(String User);
+
 }
