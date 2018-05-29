@@ -25,6 +25,14 @@ public class Data
 	@GeneratedValue(generator="DataSeq",strategy=GenerationType.SEQUENCE)
 	private Integer data_id;
 
+	@Column(name="Notes")
+	private String Notes;
+	
+	@Column(name="PuzzleSequence")
+	private String PuzzleSequence;
+	
+	@Column(name="Answer")
+	private String Answer;
 	public Integer getData_id() {
 		return data_id;
 	}
@@ -49,11 +57,7 @@ public class Data
 		Answer = answer;
 	}
 
-	@Column(name="PuzzleSequence")
-	private String PuzzleSequence;
-	
-	@Column(name="Answer")
-	private String Answer;
+
 	
 
 	public String getNotes() {
@@ -64,7 +68,6 @@ public class Data
 		Notes = notes;
 	}
 
-	@Column(name="Notes")
-	private String Notes;
+
 	
 }
