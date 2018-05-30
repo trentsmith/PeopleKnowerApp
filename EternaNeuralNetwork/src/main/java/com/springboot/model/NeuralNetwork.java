@@ -2,27 +2,14 @@ package com.springboot.model;
 
 public class NeuralNetwork 
 {
-Node head; // head of list
+public Node head; // head of list
 String puzzle;
 /* Linked list Node*/
-class Node
-{
-String ans;
-String puzzle;
-Node dot, line;
-Node(String ans,String puzzle)
-{
-this.ans = ans;
-this.puzzle = puzzle;
-dot = null;
-line = null;
-}
-}
 
 // An utility function to merge two sorted linked lists
 /* Utility function to insert a node at begining of the
 linked list */
-Node push(Node head_ref, String ans,String puzzle)
+public Node push(Node head_ref, String ans,String puzzle)
 {
 /* 1 & 2: Allocate the Node &
 Put in the data*/
@@ -34,7 +21,7 @@ if(puzzle.substring(puzzle.length() - 1)==".")
 new_node.dot = head_ref;
 
 }
-if(puzzle.substring(puzzle.length() - 1)==")")
+if(puzzle.substring(puzzle.length() - 1).equals(")")||puzzle.substring(puzzle.length() - 1).equals("("))
 {
 new_node.line = head_ref;
 
@@ -46,7 +33,7 @@ head_ref = new_node;
 return head_ref;
 }
 
-void printList()
+public void printList()
 {
     Node temp = head;
     while (temp != null)
