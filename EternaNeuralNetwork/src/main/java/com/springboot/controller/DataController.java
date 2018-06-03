@@ -26,7 +26,7 @@ public class DataController {
 	@RequestMapping(method=RequestMethod.POST, consumes=MediaType.APPLICATION_JSON_VALUE)
 	public void addFC(@RequestBody Data d)
 	{
-		service.addData(d);;
+		service.addData(d);
 	}
 	@CrossOrigin
 	@RequestMapping(path = "/all",method = RequestMethod.GET,  produces=MediaType.APPLICATION_JSON_VALUE)
@@ -40,9 +40,22 @@ public class DataController {
 	{
 		List<Data> d = findAll(); 
 		NeuralNetwork n = new NeuralNetwork();
-		n.head = n.push(n.head,"GGGAAA","((()))");
+		n.head = n.push(n.head,"test","head");
 		n.printList();
 		return d;
 	}
+	/*@RequestMapping(path = "/add2nn",method = RequestMethod.POST,  produces=MediaType.APPLICATION_JSON_VALUE)
+	public void add2nn(@RequestBody Data d) 
+	{
 	
+		NeuralNetwork n = new NeuralNetwork();
+		n.head = n.push(n.head,"test","head");
+		int i;
+		List<Data> data = service.findAllData();
+		for(i=0;i<data.size();i++)
+		{
+		//	n.head=n.push(n.head, data.get(i).getAnswer(), data.get(i).getPuzzleSequence());
+		}
+//		n.printList();
+	}*/
 }
