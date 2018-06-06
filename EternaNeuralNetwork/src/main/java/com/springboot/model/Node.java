@@ -3,9 +3,10 @@ package com.springboot.model;
 
 public class Node
 {
-String ans;
-String puzzle;
-Node dot, line;
+public String ans;
+public String puzzle;
+public Node dot;
+public Node line;
 Node(String ans,String puzzle)
 {
 this.ans = ans;
