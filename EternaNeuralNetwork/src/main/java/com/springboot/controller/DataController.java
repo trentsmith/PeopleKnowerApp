@@ -1,6 +1,5 @@
 package com.springboot.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +15,7 @@ import com.springboot.model.Data;
 import com.springboot.model.NeuralNetwork;
 import com.springboot.model.Node;
 import com.springboot.service.DataService;
-
+@CrossOrigin
 @RestController
 @RequestMapping("/api/Data")
 public class DataController {
@@ -64,7 +63,6 @@ public class DataController {
 	@RequestMapping(path = "/solve/{Sequence}",method = RequestMethod.GET,  produces=MediaType.APPLICATION_JSON_VALUE)
 	public String solve(@PathVariable(value="Sequence") String s) 
 	{
-	
 		int i;
 		Node temp = n.head;
 		for(i=0;i<s.length();i++)
@@ -76,6 +74,10 @@ public class DataController {
 				if(s.charAt(i)=='('||s.charAt(i)==')')
 				{
 					temp = temp.line;
+				}
+				if(temp.ans!=null)
+				{
+					
 				}
 		}
 		return temp.ans;
