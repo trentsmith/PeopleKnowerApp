@@ -56,7 +56,7 @@ public void printList()
 }
 
 /* Drier program to test above functions */
-} /* This code is contributed by Rajat Mishra */
+} 
 
 /******************Access to the Api******************/
 
